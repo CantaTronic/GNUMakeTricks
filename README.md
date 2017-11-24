@@ -1,6 +1,8 @@
+#How to use conditions in GNU Make?
+
 Никакой "условной компиляции" в GNU Make не существует, ибо:
 
-Conditionals control what 'make' actually "sees" in the 
+>Conditionals control what 'make' actually "sees" in the 
 makefile, so they cannot be used to control recipes at the
 time of execution. (с) documentation
 
@@ -11,17 +13,20 @@ time of execution. (с) documentation
 компиляцию в зависимости от их значений. Вот в эту сторону
 данный репозиторий и развивается.
 
-Синтаксис:
+###Синтаксис:
 
-Запуск: make verb=1
+####Запуск: 
+make verb=1
 
-В самом Makefil'е пишем:
+####В самом Makefil'е пишем:
 
+'''
 ifeq ($(verb), 1)
         @shell action 1
-# else
+else
         @shell action 2
 endif
+'''
 
 Может быть полезно, например, для вывода (или НЕ вывода) подробных сообщений о ходе компиляции.
 
