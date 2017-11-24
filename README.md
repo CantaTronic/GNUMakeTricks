@@ -1,4 +1,4 @@
-#How to use conditions in GNU Make?
+# How to use conditions in GNU Make?
 
 Никакой "условной компиляции" в GNU Make не существует, ибо:
 
@@ -13,12 +13,12 @@ time of execution. (с) documentation
 компиляцию в зависимости от их значений. Вот в эту сторону
 данный репозиторий и развивается.
 
-###Синтаксис:
+### Синтаксис:
 
-####Запуск: 
+#### Запуск: 
 make verb=1
 
-####В самом Makefil'е пишем:
+#### В самом Makefil'е пишем:
 
 '''
 ifeq ($(verb), 1)
